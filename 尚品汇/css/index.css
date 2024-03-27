@@ -1,0 +1,463 @@
+/* 通用 */
+.container{
+    width: 1190px;
+    margin: 0 auto;
+}
+
+/* 顶部导航条开始 */
+.topbar{
+    height: 30px;
+    background-color: #ececec;
+}
+.welcome{
+    height: 30px;
+    line-height: 30px;
+    font-size: 0px;
+    color: #666;
+}
+.welcome span, .welcome a{
+    font-size: 12px;
+}
+.welcome .hello{
+    margin-right: 28px;
+}
+.login{
+    padding-right: 10px;
+    border-right: 1px solid #666;
+}
+.register{
+    margin-left: 10px;
+}
+.topbar-nav{
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+}
+.topbar-nav ul li{
+    float: left;
+    font-size: 12px;
+
+}
+.topbar-nav ul li a{
+    padding-left: 10px;
+    border-left: 1px solid #666;
+    padding-right: 10px;
+}
+.topbar-nav ul li:last-child a{
+    padding-left: 10px;
+    border-left: 1px solid #666;
+}
+.topbar-nav ul li:first-child a{
+    padding-right: 10px;
+}
+/* 顶部导航条结束 */
+
+/* 头部开始 */
+.toubu{
+    height: 120px;
+}
+.toubuyou form{
+    margin-top: 42px;
+    font-size: 0;
+}
+.toubuyou input{
+    height: 34px;
+    width: 508px;
+    border: 1px solid #dd302d;
+    background-color: white;
+}
+.toubuyou button{
+    width: 80px;
+    height: 36px;
+    background-color: #dd302d;
+    background-image: url(../images/serch_icon.png);
+    background-repeat: no-repeat;
+    background-position: 28px 6px;
+    vertical-align: top;
+}
+/* 头部结束 */
+
+/* 主导航开始 */
+.zdh{
+    height: 47px;
+    border-bottom: 1px solid #dd302d;
+}
+.zdhy ul li{
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 47px;
+    line-height: 47px;
+}
+.zdhz{
+    background-color: #dd302d;
+    color: white;
+    height: 47px;
+    width: 190px;
+    line-height: 47px;
+    font-size: 16px;
+    text-align: center;
+}
+.zdhy ul li a{
+    font-size: 16px;
+    color: #333;
+}
+.zdhy li:hover a{
+    color: #dd302d;
+}
+/* 主导航结束 */
+
+/* 主要内容开始 */
+.zynr{
+    margin-top: 10px;
+}
+.zynrz{
+    width: 190px;
+    height: 458px;
+    background-color: #f4f4f4;
+    position: relative;
+}
+.zynrlbt{
+    width: 690px;
+    height: 458px;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+    position: relative;
+}
+#lbt{
+    width: 3450px;
+    height: 458px;
+    position: absolute;
+    z-index: 1;
+}
+#lbt a{
+    float: left;
+    width: 690px;
+    height: 458px;
+}
+.my-btn{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 205px;
+    z-index: 2;
+    border-radius: 100%;
+}
+#leftbtn{
+    left: 0;
+}
+#rightbtn{
+    right: 0;
+}
+#yuandian{
+    list-style: none;
+    position: absolute;
+    bottom: 10px;
+    left: 254px;
+    z-index: 2;
+    padding-left: 0px;
+}
+#yuandian li{
+float: left;
+margin-right: 8px;
+border-radius: 100%;
+border: 1px solid black;
+width: 10px;
+height: 10px;
+background-color: rgba(255,255,255,.4);
+}
+#yuandian .on{
+background-color: red;
+}
+.zynry{
+    width: 290px;
+    height: 458px;
+}
+.zynrz li{
+    font-size: 14px;
+    padding: 7px 0px 0px 16px;
+}
+.zynrz li:hover{
+    background-color: #dd302d;
+}
+.zynrz li:hover .second-menu{
+    display: block;
+}
+.zynrz li:hover>a{
+    color: white;
+}
+.zynrz li>a{
+    color: #333;
+}
+.second-menu{
+    width: 680px;
+    height: 458px;
+    position: absolute;
+    top:0;
+    left:190px;
+    padding-left: 20px;
+    display: none;
+    background-color: white;
+    z-index: 5;
+}
+.second-menu dl{
+    height: 36px;
+    line-height: 36px;
+}
+.second-menu dl:first-child{
+    margin-top: 10px;
+}
+.second-menu dt{
+    float: left;
+    width: 70px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.second-menu dd{
+    float: left;
+}
+.second-menu dd a{
+    padding: 0 10px;
+    border-left: 1px solid #666;
+}
+.spkb{
+    width: 290px;
+    height: 158px;
+    border: 1px solid rgba(217,217,217,1);
+}
+.spkbn{
+    margin: 15px 14px 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(217,217,217,1);
+}
+.spkbn span{
+    font-size: 14px;
+}
+.spkbn a{
+    float: right;
+}
+.spkbnr{
+    margin: 0 14px;
+}
+.spkbnr li{
+    margin: 5px 0;
+}
+.sptb{
+    width: 290px;
+    height: 290px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.sptb li{
+    height: 70px;
+    width: 48px;
+    float: left;
+    margin: 0 11px;
+    text-align: center;
+}
+.sptb li:first-child{
+    margin-left: 16px;
+}
+.sptb ul:first-child{
+    margin-top: 16px;
+}
+.sptb ul:nth-child(2){
+    margin: 17px 0;
+}
+.picture{
+    background-image: url('../images/精灵图-侧边功能.png');
+    width: 48px;
+    height: 48px;
+}
+.sptb ul:nth-child(1) li:nth-child(1) .picture{
+    background-position: 0 0;
+}
+.sptb ul:nth-child(1) li:nth-child(2) .picture{
+    background-position: -48px 0;
+}
+.sptb ul:nth-child(1) li:nth-child(3) .picture{
+    background-position: -96px 0;
+}
+.sptb ul:nth-child(1) li:nth-child(4) .picture{
+    background-position: -144px 0;
+}
+.sptb ul:nth-child(2) li:nth-child(1) .picture{
+    background-position: 0 -48px;
+}
+.sptb ul:nth-child(2) li:nth-child(2) .picture{
+    background-position: -48px -48px;
+}
+.sptb ul:nth-child(2) li:nth-child(3) .picture{
+    background-position: -96px -48px;
+}
+.sptb ul:nth-child(2) li:nth-child(4) .picture{
+    background-position: -144px -48px;
+}
+.sptb ul:nth-child(3) li:nth-child(1) .picture{
+    background-position: 0 -96px;
+}
+.sptb ul:nth-child(3) li:nth-child(2) .picture{
+    background-position: -48px -96px;
+}
+.sptb ul:nth-child(3) li:nth-child(3) .picture{
+    background-position: -96px -96px;
+}
+.sptb ul:nth-child(3) li:nth-child(4) .picture{
+    background-position: -144px -96px;
+}
+/* 主要内容结束 */
+/* 秒杀开始 */
+.miaosha{
+    margin-top: 10px;
+}
+.miaosha img{
+    float: left;
+    margin-right: 11px;
+    cursor: pointer;
+}
+.miaosha img:last-child{
+    margin: 0;
+}
+/* 秒杀结束 */
+/* 楼层开始 */
+.louceng{
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+.loucengs{
+    height: 30px;
+    padding-bottom: 4px;
+    border-bottom: #dd302d solid 2px;
+}
+.loucengs span{
+    font-size: 20px;
+    font-weight: bold;
+}
+.loucengs li{
+float: left;
+font-size: 16px;
+height: 30px;
+line-height: 30px;
+}
+.loucengs li a{
+    padding: 0 10px;
+    border-left: 1px solid #666;
+}
+.loucengs li:last-child a{
+    padding-right: 0;
+}
+.loucengs li:first-child a{
+    border-left: none;
+    font-size: 16px;
+}
+.loucengs li:first-child a{
+    color: #dd302d;
+}
+.loucengx{
+    height: 432px;
+}
+.lcx1{
+    width: 190px;
+    height: 392px;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+.lcx2{
+    width: 340px;
+    height: 432px;
+}
+.lcx3{
+    width: 206px;
+    height: 431px;
+}
+.lcx4{
+    border-left:1px solid #e2e2e2 ;
+    border-right:1px solid #e2e2e2 ;
+    width: 206px;
+    height: 431px;
+    border-bottom: 1px solid #e2e2e2;
+}
+.lcx5{
+    border-bottom: #e2e2e2 1px solid;
+    height: 215px;
+}
+.lcx1 li{
+    height: 22px;
+    width: 90px;
+    padding-bottom: 3.5px;
+    text-align: center;
+    font-size: 16px;
+}
+.lcx1 ul{
+    margin-bottom: 30px;
+}
+.lcx1 ul li:nth-child(2n-1){
+    float: left;
+}
+.lcx1 ul li:nth-child(2n){
+    float: right;
+}
+.lcx1 ul li:nth-child(3){
+    margin: 14.4px 0;
+}
+.lcx1 ul li:nth-child(4){
+    margin: 14.4px 0;
+}
+/* 楼层结束 */
+/* 页脚开始 */
+.yejiao{
+    height: 440px;
+    background-color: #483e3e;
+}
+.yejiaos{
+    padding-top: 48px;
+    height: 198px;
+    border-bottom: 1px solid #584d4d; 
+}
+.yejiaos ul{
+    width: 190px;
+    float: left;
+    margin-right: 10px;
+}
+.yejiaos ul:last-child{
+    margin-right:0 ;
+}
+.yejiaos ul li{
+    margin-bottom: 5px;
+}
+.yejiaos ul li a{
+    font-size: 14px;
+    color: #fff;
+}
+.yejiaos ul:last-child li:nth-child(2) a{
+    line-height: 25px;
+}
+.bottom-links li{
+    float: left;
+}
+.yejiaox{
+    text-align: center;
+}
+.bottom-links{
+    display: inline-block;
+    margin-top: 47px;
+    margin-bottom: 10px;
+}
+.bottom-links li a{
+    padding:0 26px;
+    border-right: 1px solid #d9d9d9;
+    color: #fff;
+}
+.bottom-links li:last-child a{
+    padding-right: 0px;
+    border: none;
+}
+.bottom-links li:first-child a{
+    padding-left: 0px;
+}
+.beian{
+    color: #fff;
+    font-size: 12px;
+}
+/* 页脚结束 */
