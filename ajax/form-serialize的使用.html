@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <form action="javascript:;" class="example-form">
+        <input type="text" name="username">
+        <br>
+        <input type="password" name="password">
+        <br>
+        <input type="button" class="btn" value="提交">
+    </form>
+    <script src="./form-serialize.js"></script>
+    <script>
+        // 使用serialize函数，快速收集表单元素的值
+        // 表单元素要设置name属性，值会作为对象的属性名
+        // name属性最好和接口文档保持一致
+        // 参数1 要获取那个表单的数据
+        // 参数2 配置对象
+        // hash 设置获取数据结构
+        //   如果为true则是json结构（js对象）
+        //   如果为false则是查询字符串
+        // empty 是否获取表单空值
+        //   true获取空值
+        //   false不获取空值
+        document.querySelector('.btn').addEventListener('click',()=>{
+            const form = document.querySelector('.example-form')
+            serialize(form,{hash:true ,empty:true})
+        })
+    </script>
+</body>
+</html>
+
