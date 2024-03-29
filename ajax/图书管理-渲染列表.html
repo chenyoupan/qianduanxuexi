@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap 5.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table class="table caption-top">
+            <caption>图书管理</caption>
+            <thead>
+                <tr>
+                    <th scope="col">序号</th>
+                    <th scope="col">书名</th>
+                    <th scope="col">作者</th>
+                    <th scope="col">出版社</th>
+                    <th scope="col">操作</th>
+                </tr>
+            </thead>
+            <tbody id="my-table">
+            </tbody>
+        </table>
+        <div class="modal fade add-modal">
+            <div class="modal-dialog">
+                <!-- 弹框-内容 -->
+                <div class="modal-content">
+                    <!-- 弹框-头部 -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">添加图书</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- 弹框-身体 -->
+                    <div class="modal-body">
+                        <span>书名：</span><br>
+                        <input type="text" class="bookname"><br>
+                        <span>作者：</span><br>
+                        <input type="text" class="author"><br>
+                        <span>出版社：</span><br>
+                        <input type="text" class="publisher">
+                    </div>
+                    <!-- 弹框-尾部 -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary btn-save">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade edit-modal">
+
+        </div>
+        <button type="button" class="btn btn-primary btn-add">
+            添加图书
+        </button>
+    </div>
+    <script src="./bootstrap/bootstrap 5.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        const creator = 'jc'
+        // 封装-获取并渲染图书列表函数
+        function getBookList() {
+            axios({
+                url: 'http://hmajax.itheima.net/api/books',
+                params: {
+                    creator,
+                }
+            }).then(result => {
+                const bookList = result.data.data
+                const htmlStr = bookList.map((item, index) => {
+                    return `<tr>
+                <td>${index + 1}</td>
+                <td>${item.bookname}</td>
+                <td>${item.author}</td>
+                <td>${item.publisher}</td>
+                <td>
+                    <span class="del">删除</span>&nbsp&nbsp&nbsp
+                    <span class="edit">编辑</span>
+                </td>
+              </tr>`
+                }).join('')
+                document.getElementById('my-table').innerHTML = htmlStr
+            })
+        }
+        getBookList();
+        const modalDom1 = document.querySelector('.add-modal')
+        const modal1 = new bootstrap.Modal(modalDom1)
+
+        // 编辑姓名->点击->弹框显示
+        document.querySelector('.btn-add').addEventListener('click', () => {
+            modal1.show();
+        })
+    </script>
+</body>
+
+</html>
